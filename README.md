@@ -72,6 +72,39 @@ chapter-{n}-{name}/
 
 ## 🚀 Getting Started
 
+### **⭐ NEW: Comprehensive Learning Resources**
+
+We've created extensive study guides to support your learning! Access them immediately:
+
+**Quick Start:**
+- 🚀 [Quick Start Guide](./resources/QUICK_START_GUIDE.md) - Get up and running in 30 minutes
+- 📚 [Resources README](./resources/README.md) - Full navigation and learning paths
+
+**By Learning Level:**
+- **Complete Beginner:** Start with [Quick Start Guide](./resources/QUICK_START_GUIDE.md)
+- **Interview Prep:** Use [Git Interview Checklist](./resources/GIT_INTERVIEW_CHECKLIST.md) + [JavaScript Study Guide](./resources/JAVASCRIPT_STUDY_GUIDE.md)
+- **Troubleshooting:** Check [Common Git Problems](./resources/COMMON_GIT_PROBLEMS.md)
+- **Deep Mastery:** Read [Master Index](./resources/MASTER_INDEX.md) for complete navigation
+
+**Resource Folder Contents:**
+- **42 comprehensive guides** (75,000+ lines of documentation)
+- **800+ code examples** ready to practice
+- **4 structured learning paths** from beginner to expert
+- **Git Guides:** 20 files covering all aspects (35,000+ lines)
+- **JavaScript Guides:** 15 files covering fundamentals to advanced (40,000+ lines)
+- **Interview Preparation:** Questions, checklists, and scenarios
+- **Problem-Solving:** Troubleshooting guides with 40+ solutions
+
+👉 **[Go to Resources Folder](./resources/)** for all learning materials
+
+**Key Documents to Start:**
+1. [Quick Start Guide](./resources/QUICK_START_GUIDE.md) - 30 minutes to your first program
+2. [Git Guides Index](./resources/GIT_GUIDES_INDEX.md) - Find any Git topic
+3. [JavaScript Guides Index](./resources/JAVASCRIPT_GUIDES_INDEX.md) - Find any JS topic
+4. [Common Problems](./resources/COMMON_GIT_PROBLEMS.md) - Solutions to 14 common issues
+
+---
+
 ### For Learners
 
 1. **Clone this repository:**
@@ -81,9 +114,11 @@ chapter-{n}-{name}/
    ```
 
 2. **Choose your path:**
-   - Start with Chapter 1 (Version Control) - essential foundation
-   - Progress through chapters sequentially for optimal learning
-   - Each chapter builds on previous knowledge
+   - ✅ **New Learners:** Start with [Quick Start Guide](./resources/QUICK_START_GUIDE.md)
+   - ✅ **Chapter 1 Foundation:** Start with [Git Guides Index](./resources/GIT_GUIDES_INDEX.md)
+   - ✅ **Interview Prep:** Use [Git Interview Checklist](./resources/GIT_INTERVIEW_CHECKLIST.md)
+   - ✅ **Deep Dive:** Follow [Master Index](./resources/MASTER_INDEX.md) learning paths
+   - ✅ **Progress through chapters** sequentially for optimal learning
 
 3. **Working on Exercises:**
    ```bash
@@ -92,12 +127,14 @@ chapter-{n}-{name}/
    
    # Solve the exercises in this directory
    # Commit frequently with clear messages
+   # Use resources folder as reference while learning
    ```
 
 4. **Submit Your Work:**
    - Follow the contribution guidelines below
    - Create a Pull Request to the main repository
    - Ensure all exercises are complete and tested
+   - Reference what you learned from resources guides
 
 ### For Instructors/Contributors
 
