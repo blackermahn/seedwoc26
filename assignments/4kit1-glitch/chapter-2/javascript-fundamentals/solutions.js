@@ -19,4 +19,13 @@ counter = 2;
 const PI = 3.14159
 //PI = 3; //Error
 
+//  Exercise-2-operators
+const sum = 10 + 5;
+const diff = 10 - 5;
+const product = 10 * 5;
+const quotient = 10 / 5;
+const remainder = 10 % 3;
+
+
+
 
