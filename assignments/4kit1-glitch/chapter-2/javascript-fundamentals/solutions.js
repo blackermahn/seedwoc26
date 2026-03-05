@@ -36,3 +36,5 @@ console.log(3 >= 3);
 console.log(true && false);  // false
 console.log(true || false);  // true
 console.log(!true);          // false
+
+const status = age > 18 ? "adult" : "minor";
