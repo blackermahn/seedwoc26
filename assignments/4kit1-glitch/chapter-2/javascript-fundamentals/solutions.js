@@ -32,4 +32,7 @@ console.log(0 === false);
 console.log(5 > 3);   
 console.log(3 >= 3);      
 
-
+// Logical
+console.log(true && false);  // false
+console.log(true || false);  // true
+console.log(!true);          // false
