@@ -112,4 +112,3 @@ if(typeof(user_name) === String && user_password != null){
 else{
   print("invalid types");
 }
-
