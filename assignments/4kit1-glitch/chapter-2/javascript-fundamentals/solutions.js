@@ -55,3 +55,44 @@ if (score >= 90) {
   console.log("Grade C");
 }
 
+console.log("5" + 3);
+console.log(5 + "3");
+console.log("5" - 3);   
+
+// Boolean coercion
+console.log(!!"hello");
+console.log(!!0);
+console.log(!!"");
+
+if ("hello") console.log("yes");
+if (0) console.log("no"); 
+
+
+// exercise-5-working-with-objects
+
+// Create object
+const user = {
+  name: "Alice",
+  age: 25,
+  email: "alice@example.com",
+  greet() {                     // method declaration
+    return `Hello, ${this.name}`;
+  }
+};
+
+// Access properties
+console.log(user.name);
+console.log(user["age"]);
+
+// Modify properties
+user.age = 26;
+user.phone = "555-1234"; // Add new property
+
+// Delete property
+delete user.phone;
+
+// Method call
+console.log(user.greet());
+
+// Check if property exists
+console.log("name" in user);
