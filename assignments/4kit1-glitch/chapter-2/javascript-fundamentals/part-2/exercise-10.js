@@ -1,3 +1,8 @@
+let email = prompt("Enter your email:");
+let password = prompt("Enter your password:");
+let rememberMe = Boolean(prompt("enter 1 or 0"));
+
+
 function login(email, password, rememberMe) {
   if (!email || !password) {
     return { success: false, message: "Email and password required" };
@@ -22,3 +27,5 @@ function login(email, password, rememberMe) {
   return { success: true, message: "Login successful" };
 }
 
+
+login(email, password, rememberMe)
