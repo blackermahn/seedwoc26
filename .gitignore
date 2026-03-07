@@ -1,0 +1,125 @@
+# .gitignore
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+dist/
+build/
+.next/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env.local
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres_data/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Testing
+coverage/
+.pytest_cache/
+.tox/
+
+# ArduinoIDE
+.ino.cpp
+.ino.d
+
+# Java (if applicable)
+*.class
+*.jar
+
+# C/C++
+*.o
+*.out
+*.exe
+*.so
+*.dylib
+a.out
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+*.bak
+*.backup
+
+# IDE specific
+.vscode/settings.json
+.vscode/extensions.json
+
+# OS specific
+.AppleDouble
+.LSOverride
+._*
+
+# Project specific
+config/secrets/
+private_keys/
+ssl_certificates/
+

@@ -1,0 +1,64 @@
+name: Content Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Validate Markdown
+      run: |
+        # Check for common markdown issues
+        echo "Checking markdown files..."
+        find . -name "*.md" -type f ! -path "./node_modules/*" ! -path "./.git/*" | while read file; do
+          echo "Validating: $file"
+          # Check for missing title
+          if ! head -1 "$file" | grep -q "^#"; then
+            echo "Warning: $file might be missing a top-level heading"
+          fi
+        done
+        echo "Markdown validation complete!"
+    
+    - name: Check File Structure
+      run: |
+        # Verify expected directories exist
+        echo "Checking directory structure..."
+        required_dirs=("chapters" "assignments" "resources" ".github" "docs")
+        for dir in "${required_dirs[@]}"; do
+          if [ ! -d "$dir" ]; then
+            echo "Error: Required directory $dir not found!"
+            exit 1
+          fi
+        done
+        echo "Directory structure validated!"
+    
+    - name: Verify Git Commit Message
+      if: github.event_name == 'push'
+      run: |
+        # Get the last commit message
+        commit_msg=$(git log -1 --pretty=%B)
+        echo "Last commit message: $commit_msg"
+        # Check if conventional commit format is used
+        if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|perf|test|chore|ci)(\(.+\))?:"; then
+          echo "Warning: Commit message might not follow conventional commit format"
+          echo "Expected format: type(scope): description"
+          echo "Example: feat(chapter-1): add module 1 content"
+        fi
+        echo "Commit message checked!"
+    
+    - name: Count Content Files
+      run: |
+        echo "Content Statistics:"
+        echo "===================="
+        echo "Chapter READMEs: $(find chapters -name "README.md" | wc -l)"
+        echo "Module files: $(find chapters -path "*/modules/*.md" | wc -l)"
+        echo "Part files: $(find chapters -path "*/parts/*.md" | wc -l)"
+        echo "Documentation files: $(find docs -name "*.md" | wc -l)"
+        echo "Resource templates: $(find resources -name "*.md" | wc -l)"
