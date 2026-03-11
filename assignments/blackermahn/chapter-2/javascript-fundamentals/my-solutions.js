@@ -112,6 +112,7 @@ if (age >= 18 && hasLicense && isInsured) {
 //can drive if he has a license and is insured, and is old enough
 
 // Can access if member OR admin
+const isAdmin = true
 if (isAdmin || isMember) {
     console.log("Access granted");
 }
@@ -119,8 +120,51 @@ if (isAdmin || isMember) {
 //uses the logical OR operator to check if either condition is true, granting access if either the user is an admin or a member.
 
 // Not locked out
+const isLocked = false;
 if (!(isLocked)) {
     console.log("Can proceed");
 }
 //can be used to check if a user is not locked out of an account, allowing them to proceed if they are not locked out. the logical NOT operator is used to negate the condition, meaning that if isLocked is false, the condition will evaluate to true, allowing the user to proceed.
+
+//Validation Example
+
+
+function validatePassword(password) {
+    if (password.length < 8) {
+        return "Too short";
+    } else if (!/[A-Z]/.test(password)) {
+        return "Missing uppercase";
+    } else if (!/[0-9]/.test(password)) {
+        return "Missing number";
+    } else {
+        return "Valid";
+    }
+}
+
+password = 12345678
+console.log(validatePassword(password));
+// Output: "Missing uppercase" because the password does not contain any uppercase letters
+//the above function checks password length
+//also checks for joint presence of letters of the alphabet and for numbers.
+
+
+//Exercise 8: Complex Logic
+
+{
+    const score = 75;
+    const isBonusEligible = true;
+    const hasAttended = true;
+
+    // Multiple conditions
+    if (score >= 70 && hasAttended) {
+        if (isBonusEligible && score >= 80) {
+            console.log("Extra credit");
+        } else {
+            console.log("Passed");
+        }
+    } else {
+        console.log("Failed");
+    }
+}
+//the above code checks if the score is greater than or equal to 70 and if the person has attended. if both conditions are true, it then checks if the person is eligible for a bonus and if the score is greater than or equal to 80. if both of those conditions are true, it prints "Extra credit". otherwise, it prints "Passed". if the initial conditions are not met, it prints "Failed".
 
