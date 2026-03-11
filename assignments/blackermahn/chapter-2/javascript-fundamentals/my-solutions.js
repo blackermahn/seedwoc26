@@ -97,3 +97,30 @@ const category =
                 "F";
 
 //the above nested ternary operator checks the score and assigns a category based on the value of the score. if the score is greater than or equal to 90, it assigns "A", if it is greater than or equal to 80, it assigns "B", if it is greater than or equal to 70, it assigns "C", otherwise it assigns "F".
+
+//Exercise 6: Combining Conditions
+const newAge = 25;
+const hasLicense = true;
+const isInsured = true;
+//variable declarations complete
+
+//we can combine conditions using logical operators to determine if a person can drive. for example:
+// Can drive if all three conditions
+if (age >= 18 && hasLicense && isInsured) {
+    console.log("Safe to drive");
+}
+//can drive if he has a license and is insured, and is old enough
+
+// Can access if member OR admin
+if (isAdmin || isMember) {
+    console.log("Access granted");
+}
+//can be used to confirm member or admin logins at a security checkpoint
+//uses the logical OR operator to check if either condition is true, granting access if either the user is an admin or a member.
+
+// Not locked out
+if (!(isLocked)) {
+    console.log("Can proceed");
+}
+//can be used to check if a user is not locked out of an account, allowing them to proceed if they are not locked out. the logical NOT operator is used to negate the condition, meaning that if isLocked is false, the condition will evaluate to true, allowing the user to proceed.
+
