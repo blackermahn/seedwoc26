@@ -52,3 +52,48 @@ console.log(status); // Output: "adult" because age is greater than 18
 
 // Nullish coalescing is another form of a ternary operator that checks if the value of a variable is null or it contains something.
 const value = null ?? "default"; // "default"
+
+//Conditional statement
+//an if else statement tests if a condition is true or false and returns (mostly by printing) a value for either point.
+// a "natural if else statement test a condition and returns a value"
+const score = 85;
+if (score >= 90) {
+    console.log("Grade A");
+} else if (score >= 80) {
+    console.log("Grade B");
+} else {
+    console.log("Grade C");
+}
+
+// an if else statement can also test if a condition is true for a certain variable, and end up switching the value of the variable due to its present value
+const day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("Start of week");
+        break;
+    case "Friday":
+        console.log("Almost weekend");
+        break;
+    default:
+        console.log("Regular day");
+}
+
+//two conditions can also be combinned (that it the results from two conditions combined ) and then stored in a variable.
+//for example
+// Combining conditions
+//const canVote = age >= 18 && isCitizen;//tests if the age is good,a and also if the individual is a citizen
+//const hasPermission = isAdmin || isOwner;//tests if the person is an admin, and if the said person is an owner, hence permission is granted based on a combination of two conditions.
+//the above code returns an error value because the variables have not been defined.
+
+//Ternary operators
+const agestatus = age >= 18 ? "Adult" : "Minor";
+// a ternary operator is a shorthand way of writing an if-else statement. it takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false. in the above code, we are checking if the age is greater than or equal to 18, and if it is, we return "Adult", otherwise we return "Minor".
+//multiple ternary operators can also be nested to check for multiple conditions. for example:
+
+const category =
+    score >= 90 ? "A" :
+        score >= 80 ? "B" :
+            score >= 70 ? "C" :
+                "F";
+
+//the above nested ternary operator checks the score and assigns a category based on the value of the score. if the score is greater than or equal to 90, it assigns "A", if it is greater than or equal to 80, it assigns "B", if it is greater than or equal to 70, it assigns "C", otherwise it assigns "F".
